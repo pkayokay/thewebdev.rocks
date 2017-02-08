@@ -16,13 +16,22 @@ body {
 .banner h1 {
 	color: #fff;
 	margin: 0 0 20px;
+	font-size: 50px;
 }
 
 form {
 	position: relative;
-	width: 80%;
+	width: 70%;
   margin: auto;
 }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+	display: none;
+}
+
 
 input[type=search] {
   -webkit-appearance: none;
@@ -34,7 +43,7 @@ input[type=search] {
 	padding: 14px;
 	font-size: 20px;
 	outline: 0;
-	width: 80%;
+	width: 70%;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -45,7 +54,8 @@ input[type="search"]::-webkit-input-placeholder {
 
 input[type=submit] {
 	position: absolute;	
-	right: 12%;
+	right: 16%;
+	top: 0;
 	margin-top: 10px;
   -webkit-appearance: none;
 	-webkit-box-shadow: none;
@@ -70,9 +80,10 @@ input[type="submit"]::-webkit-input-placeholder {
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    opacity: 0.5;
 }
 
 #search-btn:hover {
-	opacity: 0.9;
+	opacity: 0.8;
 	cursor: pointer;
 }
