@@ -1,4 +1,78 @@
-*{
-	padding:0;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: "Roboto", sans-serif;
 	margin:0;
+	padding: 0;
+}
+
+.banner {
+	text-align: center;
+	background: #ea2e0e;
+	height: 200px;
+	padding: 100px 0 0;
+}
+
+.banner h1 {
+	color: #fff;
+	margin: 0 0 20px;
+}
+
+form {
+	position: relative;
+	width: 80%;
+  margin: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 0;
+	border-style: solid;
+	padding: 14px;
+	font-size: 20px;
+	outline: 0;
+	width: 80%;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+	color: #ddd;
+	font-weight: 300;
+	font-size: 17px;
+}
+
+input[type=submit] {
+	position: absolute;	
+	right: 12%;
+	margin-top: 10px;
+  -webkit-appearance: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 0;
+	border-style: solid;
+	outline: 0;
+	width: 33px;
+	height: 33px;
+}
+
+input[type="submit"]::-webkit-input-placeholder {
+	color: #000;
+	font-weight: 300;
+}
+
+
+#search-btn {
+	background: transparent url(../img/search.png) top left no-repeat;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+	opacity: 0.9;
+	cursor: pointer;
 }
