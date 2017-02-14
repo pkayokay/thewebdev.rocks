@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
 
 body {
 	font-family: "Roboto", sans-serif;
-	margin:0;
-	padding: 0;
+	margin: 0;
+	padding: 0 0 30px;
 }
 
 h1 a {
@@ -91,4 +91,101 @@ input[type="submit"]::-webkit-input-placeholder {
 #search-btn:hover {
 	opacity: 0.8;
 	cursor: pointer;
+}
+
+.clearfix {
+	clear:both;
+}
+
+#results {
+	margin: 85px auto 0;
+	width: 800px;
+}
+
+#results li{
+	padding:10px 0;
+	list-style:none;
+	overflow:auto;
+}
+
+#results li p {
+	color: #3b3b3b;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.list-left{
+	float:left;
+	width:25%;
+}
+
+.list-left img{
+	width: 222px;
+	margin-top: 20px;
+	border-radius: 3px;
+}
+
+.list-right{
+	float:right;
+	text-align: left;
+	width:70%;
+}
+
+.cTitle{
+	color:#dd2826;
+}
+
+.button-container {
+	margin: 30px 0;
+}
+
+
+@media (max-width: 820px) {
+
+	#results {
+		width: 100%;
+	}
+
+	.list-left{
+		width:36%;
+	}
+
+	.list-right{
+		width:60%;
+	}
+
+	.list-left img{
+		width: 100%;
+    margin-top: 17px;
+    padding: 0px 11px 0;
+	}
+
+	input[type=search] {
+		font-size: 16px;
+	}
+}
+
+
+
+@media (max-width: 520px) {
+
+	#results {
+		width: 92%;
+	}
+
+	.list-left{
+		float: none;
+		width: 100%
+	}
+
+	.list-right{
+		float: none;
+		width: 100%;
+	}
+
+	.list-left img{
+		width: 100%;
+    margin-top: 0;
+    padding: 0;
+	}
 }

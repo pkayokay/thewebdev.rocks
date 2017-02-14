@@ -70,15 +70,16 @@ function getOutput(item){
   var videoDate = item.snippet.publishedAt;
   
   // Build Output String
-  var output = 
-  '<div class="list">' +
+  var output = '<li>' +
+  '<div class="list-left">' +
   '<img src="'+thumb+'">' +
   '</div>' +
-  '<div class="list">' +
+  '<div class="list-right">' +
   '<h3>'+title+'</h3>' +
-  '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>'
-  +
+  '<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
+  '<p>'+description+'</p>' +
   '</div>' +
+  '</li>' +
   '<div class="clearfix"></div>' +
   '';
   
