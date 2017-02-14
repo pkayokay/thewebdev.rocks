@@ -147,7 +147,8 @@ button {
 	background: #ea2e0e;
   border: 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  margin: 6px;
   padding: 11px;
   cursor: pointer;
   text-transform: uppercase;

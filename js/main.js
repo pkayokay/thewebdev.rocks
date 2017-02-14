@@ -91,6 +91,93 @@ function getOutput(item){
   return output;
 }
 
+// Next page function
+
+function nextPage() {
+  var token = $('#next-button').data('token');
+  var q = $('#next-button').data('query');
+  // Clear Results
+  $('#results').html('');
+  $('#buttons').html('');
+  
+  // Get Form Input
+  q = $('#query').val();
+  
+  // Run GET Request on API
+  $.get(
+    "https://www.googleapis.com/youtube/v3/search",{
+      part: 'snippet, id',
+      q: q,
+      pageToken: token,
+      type:'video',
+      key: 'AIzaSyA8050EV9ucpro6oNMHo3AFm8d1IjUIoJc'},
+      function(data){
+        var nextPageToken = data.nextPageToken;
+        var prevPageToken = data.prevPageToken;
+        
+        // Log Data
+        console.log(data);
+        
+        $.each(data.items, function(i, item){
+          // Get Output
+          var output = getOutput(item);
+          
+          // Display Results
+          $('#results').append(output);
+        });
+
+        var buttons = getButtons(prevPageToken, nextPageToken);
+        
+        // Display buttons
+        $('#buttons').append(buttons);
+      }
+  );
+
+}
+
+
+// Prev page function 
+function prevPage() {
+  var token = $('#prev-button').data('token');
+  var q = $('#prev-button').data('query');
+  // Clear Results
+  $('#results').html('');
+  $('#buttons').html('');
+  
+  // Get Form Input
+  q = $('#query').val();
+  
+  // Run GET Request on API
+  $.get(
+    "https://www.googleapis.com/youtube/v3/search",{
+      part: 'snippet, id',
+      q: q,
+      pageToken: token,
+      type:'video',
+      key: 'AIzaSyA8050EV9ucpro6oNMHo3AFm8d1IjUIoJc'},
+      function(data){
+        var nextPageToken = data.nextPageToken;
+        var prevPageToken = data.prevPageToken;
+        
+        // Log Data
+        console.log(data);
+        
+        $.each(data.items, function(i, item){
+          // Get Output
+          var output = getOutput(item);
+          
+          // Display Results
+          $('#results').append(output);
+        });
+
+        var buttons = getButtons(prevPageToken, nextPageToken);
+        
+        // Display buttons
+        $('#buttons').append(buttons);
+      }
+  );
+
+}
 
 
 // Build the buttons
