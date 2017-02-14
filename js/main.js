@@ -22,6 +22,8 @@ $(function(){
 
   $('#search-form').submit(function(e){
     e.preventDefault();
+    $('body').css({ background: 'none'});
+    $('.banner').animate({ padding: '50px 0 0 0'}, 400);
   });
 })
 
