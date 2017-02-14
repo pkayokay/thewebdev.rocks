@@ -1,5 +1,8 @@
+
 // Searchbar Handler
+
 $(function(){
+
   var searchField = $('#query');
   var icon = $('#search-btn');
   
@@ -12,7 +15,7 @@ $(function(){
   // Blur Event Handler
   $(searchField).on('blur', function(){
     if(searchField.val() == '') {
-      $(searchField).animate({ width:'75%'},400, function(){});
+      $(searchField).animate({ width:'70%'},400, function(){});
       $(icon).animate({right:'16%'}, 50, function(){});
     }
   });
