@@ -5,23 +5,15 @@ $(function(){
   
   // Focus Event Handler
   $(searchField).on('focus', function(){
-    $(icon).animate({
-      right:'7px'
-    }, 150);
-    $(this).animate({
-      width:'100%'
-    }, 400);
+    $(icon).animate({ right:'7px'}, 150);
+    $(this).animate({ width:'100%'}, 400);
   });
   
   // Blur Event Handler
   $(searchField).on('blur', function(){
-    if(searchField.val() == ''){
-      $(searchField).animate({
-        width:'75%'
-      },400, function(){});
-      $(icon).animate({
-        right:'16%'
-      }, 50, function(){});
+    if(searchField.val() == '') {
+      $(searchField).animate({ width:'75%'},400, function(){});
+      $(icon).animate({right:'16%'}, 50, function(){});
     }
   });
 
@@ -29,7 +21,6 @@ $(function(){
     e.preventDefault();
   });
 })
-
 
 function search(){
   // Clear Results
@@ -60,6 +51,11 @@ function search(){
           // Display Results
           $('#results').append(output);
         });
+
+        var buttons = getButtons(prevPageToken, nextPageToken);
+        
+        // Display buttons
+        $('#buttons').append(buttons);
       }
   );
 }
@@ -87,4 +83,22 @@ function getOutput(item){
   '';
   
   return output;
+}
+
+
+
+// Build the buttons
+
+function getButtons(prevPageToken, nextPageToken){
+  if(!prevPageToken){
+    var btnoutput = '<div class="button-container">'+'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"' +
+    'onclick="nextPage();">Next Page</button></div>';
+  } else {
+    var btnoutput = '<div class="button-container">'+
+    '<button id="prev-button" class="paging-button" data-token="'+prevPageToken+'" data-query="'+q+'"' +
+    'onclick="prevPage();">Prev Page</button>' +
+    '<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"' +
+    'onclick="nextPage();">Next Page</button></div>';
+  }
+  return btnoutput;
 }

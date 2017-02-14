@@ -6,6 +6,11 @@ body {
 	padding: 0;
 }
 
+h1 a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .banner {
 	text-align: center;
 	background: #ea2e0e;
