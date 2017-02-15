@@ -1,8 +1,3 @@
-$(document).ready(function() {
-    $(".fancybox").fancybox();
-  });
-
-
 
 
 // Searchbar Handler
@@ -46,6 +41,8 @@ function search(){
     "https://www.googleapis.com/youtube/v3/search",{
       part: 'snippet, id',
       q: q,
+      maxResults: 4,
+      channelId: 'UCyIe-61Y8C4_o-zZCtO4ETQ',
       type:'video',
       key: 'AIzaSyA8050EV9ucpro6oNMHo3AFm8d1IjUIoJc'},
       function(data){
@@ -82,8 +79,8 @@ function getOutput(item){
   
   // Build Output String
   var output = '<li>' +
-  '<div class="list-left">' +
-  '<img src="'+thumb+'">' +
+  '<div class="list-left"><a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">' +
+  '<img src="'+thumb+'"></a>' +
   '</div>' +
   '<div class="list-right">' +
   '<h3><a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">'+title+'</a></h3>' +
@@ -114,6 +111,8 @@ function nextPage() {
     "https://www.googleapis.com/youtube/v3/search",{
       part: 'snippet, id',
       q: q,
+      maxResults: 4,
+      channelId: 'UCyIe-61Y8C4_o-zZCtO4ETQ',
       pageToken: token,
       type:'video',
       key: 'AIzaSyA8050EV9ucpro6oNMHo3AFm8d1IjUIoJc'},
@@ -158,6 +157,8 @@ function prevPage() {
     "https://www.googleapis.com/youtube/v3/search",{
       part: 'snippet, id',
       q: q,
+      maxResults: 4,
+      channelId: 'UCyIe-61Y8C4_o-zZCtO4ETQ',
       pageToken: token,
       type:'video',
       key: 'AIzaSyA8050EV9ucpro6oNMHo3AFm8d1IjUIoJc'},
