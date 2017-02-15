@@ -1,6 +1,6 @@
 # TheWebDevRocks
 
-TheWebDevRocks uses Youtube's Data API to search for videos related to web development. I customized it to only search for [DevTip's](https://www.youtube.com/user/DevTipsForDesigners/) Youtube channel. He is a designer with a lot of "Dev Tips" and tutorials on front-end development. Here's the [project](https://www.thewebdev.rocks/).
+TheWebDevRocks uses Youtube's Data API to search for videos related to web development. I customized it to only search for [DevTip's](http://www.youtube.com/user/DevTipsForDesigners/) Youtube channel. He is a designer with a lot of "Dev Tips" and tutorials on front-end development. Here's the [project](http://www.thewebdev.rocks/).
 
 ### Features: 
 
@@ -8,4 +8,4 @@ TheWebDevRocks uses Youtube's Data API to search for videos related to web devel
 
 #### Preview
 
-![alt tag](https://github.com/pkayokay/thewebdev.rocks/tree/master/img/thewebdev.png)
+![alt tag](https://github.com/pkayokay/thewebdev.rocks/img/thewebdev.png)
