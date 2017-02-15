@@ -5,7 +5,7 @@ body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
 	padding: 0 0 30px;
-	background: #ea2e0e;
+	background: #222;
 }
 
 a {
@@ -15,9 +15,8 @@ a {
 
 .banner {
 	text-align: center;
-	height: 180px;
-	background: #ea2e0e;
-	height: 200px;
+	background: #222;
+	height: 233px;
 	padding: 180px 0 0;
 }
 
@@ -102,7 +101,7 @@ input[type="submit"]::-webkit-input-placeholder {
 }
 
 #results {
-	margin: 55px auto 0;
+	margin: 80px auto 0;
 	width: 800px;
 }
 
@@ -136,7 +135,8 @@ input[type="submit"]::-webkit-input-placeholder {
 }
 
 .cTitle{
-	color:#dd2826;
+	color:#09cef1;
+	font-weight: 500;
 }
 
 .button-container {
@@ -144,31 +144,22 @@ input[type="submit"]::-webkit-input-placeholder {
 }
 
 button {
-	background: #ea2e0e;
+	background: #09cef1;
   border: 0;
   color: #fff;
   font-size: 14px;
   margin: 6px;
+  font-weight: 700;
   padding: 11px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-
-/*.fancybox-lock .fancybox-overlay {
-	background: rgba(0, 0, 0, 0.42);
-}
-
-.fancybox-opened .fancybox-skin {
-	background: none !important;
-	box-shadow: none !important;
-	-webkit-box-shadow: none !important;;
-}*/
-
 @media (max-width: 820px) {
 
 	#results {
 		width: 100%;
+		margin-top: 66px;
 	}
 
 	.list-left{
@@ -187,6 +178,14 @@ button {
 
 	input[type=search] {
 		font-size: 16px;
+	}
+
+	.banner {
+		height: 200px;
+	}
+	
+	.banner h1 {
+		font-size: 55px;
 	}
 }
 
@@ -216,10 +215,11 @@ button {
 
 	.banner {
 		padding-top: 50px;
+		height: 160px;
 	}
 
 	.banner h1 {
-		font-size: 68px;
+		font-size: 30px;
 	}
 
 }
