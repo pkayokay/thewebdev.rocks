@@ -8,4 +8,4 @@ TheWebDevRocks uses Youtube's Data API to search for videos related to web devel
 
 #### Preview
 
-![alt tag](https://github.com/pkayokay/thewebdev.rocks/img/thewebdev.png)
+![TheWebDevRocks Project](https://github.com/pkayokay/thewebdev.rocks/blob/master/img/thewebdev.png)
