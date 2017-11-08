@@ -79,7 +79,7 @@ function getOutput(item){
   
   // Build Output String
   var output = '<li>' +
-  '<div class="list-left"><a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/'+videoId+'">' +
+  '<div class="list-left"><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/'+videoId+'">' +
   '<img src="'+thumb+'"></a>' +
   '</div>' +
   '<div class="list-right">' +
